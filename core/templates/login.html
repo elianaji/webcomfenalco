@@ -1,0 +1,17 @@
+{% block content %}
+    <h1>{{tittle}}</h1>
+
+    <from method="post" action="">
+        {% csrf_token %}
+
+        <label for="usersame">Nombre de usuario:</label>
+        <input tyoe="text" name="username">
+
+        <label for="password">Nombre de usuario:</label>
+        <input type="password" name="password">
+
+        <input type="submit" value="Registrarse">
+
+    </from>
+
+{% endblock %}
