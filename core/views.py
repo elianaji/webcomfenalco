@@ -2,9 +2,9 @@ from django.shortcuts import render, HttpResponse
 
 def login(request):
 
-    if request.method == 'GET' ['db.sqlite3']
-        db.sqlite3 = GET = ['db.sqlite3']
-        if (db.sqlite3="True")
+    #if request.method == 'GET' ['db.sqlite3']
+       # db.sqlite3 = GET = ['db.sqlite3']
+        #if (db.sqlite3="True")#
 
 
     if request.method == 'POST':
