@@ -2,6 +2,11 @@ from django.shortcuts import render, HttpResponse
 
 def login(request):
 
+    if request.method == 'GET' ['db.sqlite3']
+        db.sqlite3 = GET = ['db.sqlite3']
+        if (db.sqlite3="True")
+
+
     if request.method == 'POST':
         username = request.POST.get('username')
         password = request.POST.get('password')
@@ -15,16 +20,7 @@ def login(request):
         else:
             messages.warning(request, 'Usuario o/y contraseña incorrecta')
 
-    # else:
-        # if user is not None:
-            # login(request, user)
-            # return redirect('cpassword') 
-
-        # else:
-            # messages.warning(request, 'Intente nuevamente')
-
-
-    return render(request, 'webcomfenalco/core/tempaltes/login.html', {
+    return render(request, '/login.html', {
         'tittle': 'Identificate'
     })
 
@@ -47,7 +43,7 @@ def cpassword(request):
         else:
             messages.warning (request, 'contraseña incorrecta, porfavor intente de nuevo')
 
-    return render(request, 'webcomfenalco/core/templates/cpassword.html' )
+    return render(request, '/cpassword.html' )
 
 
 

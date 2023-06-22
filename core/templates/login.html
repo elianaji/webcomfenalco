@@ -1,7 +1,7 @@
 {% block content %}
     <h1>{{tittle}}</h1>
 
-    <from method="post" action="">
+    <from method="post" action="usuario">
         {% csrf_token %}
 
         <label for="usersame">Nombre de usuario:</label>
