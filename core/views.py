@@ -24,8 +24,6 @@ def login(request):
         'tittle': 'Identificate'
     })
 
-def menu(request):
-    return render(request)
 
 def cpassword(request):
     
@@ -45,6 +43,9 @@ def cpassword(request):
 
     return render(request, '/cpassword.html' )
 
+def menu(request):
+
+def desbloqueo(request):
 
 
 

@@ -6,5 +6,6 @@ urlpatterns = [
     path('', views.login, name="login"),
     path('menu/', views.menu, name="menu"),
     path('cpassword/', views.cpassword, name="password"),
+    path('desbloqueo/', views.desbloqueo, name="desbloqueo"),
 
 ]
