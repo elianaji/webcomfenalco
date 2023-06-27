@@ -6,3 +6,9 @@ class loginAdmin(admin.ModelAdmin):
     pass
 
 admin.site.register(login, loginAdmin)
+
+class cpasswordAdmin(admin.ModelAdmin):
+    pass
+
+admin.site.register(cpassword, cpasswordAdmin)
+

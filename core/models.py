@@ -3,6 +3,8 @@ from django.contrib.auth.models import User
 
 # Create your models here.
 
+#user = User.objects.create_user(username='eliana',
+#                              password='eliana123')
 
 class login(models.Model):
     username = models.CharField(max_length=200)
@@ -19,7 +21,7 @@ class cpassword(models.Model):
     
 
     def __unicode__(self):
-        return self.menu
+        return self.cpassword
 
 
 

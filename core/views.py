@@ -16,8 +16,8 @@ def login(request):
         else:
             messages.warning(request, 'Usuario o/y contraseña incorrecta')
 
-    return render(request, '/login.html', {
-        'tittle': 'Identificate'
+    return render(request, 'login.html', {
+        'tittle': 'Ingresar'
     })
 
 
@@ -37,7 +37,7 @@ def cpassword(request):
         else:
             messages.warning (request, 'contraseña incorrecta, porfavor intente de nuevo')
 
-    return render(request, '/cpassword.html' )
+    return render(request, 'cpassword.html' )
 
 def menu(request):
 
