@@ -1,11 +1,7 @@
 from django.shortcuts import render, HttpResponse
 
+
 def login(request):
-
-    #if request.method == 'GET' ['db.sqlite3']
-       # db.sqlite3 = GET = ['db.sqlite3']
-        #if (db.sqlite3="True")#
-
 
     if request.method == 'POST':
         username = request.POST.get('username')
@@ -45,7 +41,30 @@ def cpassword(request):
 
 def menu(request):
 
+    if (opcion=='1'):
+        print('Cambiar contraseña')    
+    
+    else:
+        if (opcion=='2'):
+            print('desbloquear usuario')
+
+        elif(opcion=='3'):
+            print('fecha de expiracion')
+
+
 def desbloqueo(request):
+
+        if request.method == 'POST':
+            username = request.POST.get('username')
+
+        user = authenticate(request, usersame=username)
+
+        if user is not None:
+            login(request, user)
+            return redirect('desbloqueo')
+
+        else:
+            messages.warning(request, 'porfavor verifique el username')
 
 
 

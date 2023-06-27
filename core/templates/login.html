@@ -1,3 +1,12 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOGIN</title>
+</head>
+<body>
+
 {% block content %}
     <h1>{{tittle}}</h1>
 
@@ -5,7 +14,7 @@
         {% csrf_token %}
 
         <label for="usersame">Nombre de usuario:</label>
-        <input tyoe="text" name="username">
+        <input type="text" name="username">
 
         <label for="password">Contraseña</label>
         <input type="password" name="password">
@@ -15,3 +24,6 @@
     </from>
 
 {% endblock %}
+</body>
+</html>
+
