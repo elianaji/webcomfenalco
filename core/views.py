@@ -11,7 +11,7 @@ def login(request):
 
         if user is not None:
             login(request, user)
-            return redirect('menu')
+            return redirect('cpassword')
 
         else:
             messages.warning(request, 'Usuario o/y contraseña incorrecta')

@@ -1,16 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LOGIN</title>
-</head>
-<body>
-
 {% block content %}
     <h1>{{tittle}}</h1>
 
-    <from method="post" action="usuario">
+    <from method="post" action="login">
         {% csrf_token %}
 
         <label for="usersame">Nombre de usuario:</label>
@@ -24,6 +15,5 @@
     </from>
 
 {% endblock %}
-</body>
-</html>
+
 

@@ -10,8 +10,8 @@ class login(models.Model):
     username = models.CharField(max_length=200)
     passsword = models.CharField(max_length=200)
     
-    def __unicode__(self):
-        return self.login
+    def __str__(self):
+        return self.username+"password"
 
 
 class cpassword(models.Model):
@@ -20,8 +20,9 @@ class cpassword(models.Model):
     comfirmpassword = models.CharField(max_length=10)
     
 
-    def __unicode__(self):
-        return self.cpassword
+    def __str__(self):
+        return self.newpassword+"comfirmpassword"
+
 
 
 
