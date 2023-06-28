@@ -1,12 +1,12 @@
 {% block content %}
 
-<form method="get" action="elija una opcion">
+<form method="get" action="menu">
 
-        <select>
-    <button type="button">cambiar Contraseña</button>
-    <button type="button">Desbloqear Usuario</button>
-    <button type="button">Fecha de expiracion</button>
-        </select>
+
+    <button href="{% url 'cpaassword' %}">cambiar Contraseña</button>
+    <button href="{% url 'desbloqueo' %}">cambiar Contraseña</button>
+    <button href="{% url 'fechadeexpiracion' %}">cambiar Contraseña</button>
+
         <input type="submit" value="Enviar">
 
     </form>

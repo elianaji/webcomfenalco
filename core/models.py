@@ -24,6 +24,6 @@ class cpassword(models.Model):
         return self.newpassword+"comfirmpassword"
 
 
-
+    
 
 
