@@ -11,7 +11,7 @@ class login(models.Model):
     passsword = models.CharField(max_length=200)
     
     def __str__(self):
-        return self.username+"password"
+        return self.username
 
 
 class cpassword(models.Model):

@@ -1,7 +1,7 @@
 from django.shortcuts import render, HttpResponse
 
 
-def login(request):
+def login_view(request):
 
     if request.method == 'POST':
         username = request.POST.get('username')
@@ -26,12 +26,15 @@ def cpassword(request):
     if request.method == 'POST':
         password = request.POST.get('password')
         newpassword = request.POST.get('newpassword')
-        comfirmpassword = request.POST.get('newpassword')
+        comfirmpassword = request.POST.get('comfirmpassword')
 
-        password = authenticate(request, newpassword=newpassword, comfirmpassword=newpassword)
+        authenticate_user = authenticate(request, username=request.user.username, newpassword=newpassword,)
 
         if password is not None:
-            login(request, password)
+            #Actualizar la contraseña
+            authenticate_user.set_password(newpassword)
+            authenticate_user.save()
+            login(request, authenticate_user)
             return redirect('login')
 
         else:
@@ -40,15 +43,15 @@ def cpassword(request):
     return render(request, 'cpassword.html' )
 
 def menu(request):
+    opcion = request.POST.get('opcion')
     
-    if (opcion=='button'):
+    if opcion =='button':
             return redirect('cpassword.html')
         
-    else:
-        if (opcion=='button'):
+    elif opcion =='button2':
             return redirect('fechaexpi.html')
         
-        elif(opcion=='button'):
+    elif opcion =='button3':
             return redirect('desbloqueo.html')
 
 
@@ -65,7 +68,6 @@ def desbloqueo(request):
 
         else:
             messages.warning(request, 'porfavor verifique el username')
-
 
 
 # Create your views here.
