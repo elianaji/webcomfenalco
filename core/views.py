@@ -11,7 +11,7 @@ def login(request):
 
         if user is not None:
             login(request, user)
-            return redirect('cpassword')
+            return redirect('menu')
 
         else:
             messages.warning(request, 'Usuario o/y contraseña incorrecta')
@@ -40,16 +40,16 @@ def cpassword(request):
     return render(request, 'cpassword.html' )
 
 def menu(request):
-
-    if (opcion=='1'):
-        print('Cambiar contraseña')    
     
+    if (opcion=='button'):
+            return redirect('cpassword.html')
+        
     else:
-        if (opcion=='2'):
-            print('desbloquear usuario')
-
-        elif(opcion=='3'):
-            print('fecha de expiracion')
+        if (opcion=='button'):
+            return redirect('fechaexpi.html')
+        
+        elif(opcion=='button'):
+            return redirect('desbloqueo.html')
 
 
 def desbloqueo(request):

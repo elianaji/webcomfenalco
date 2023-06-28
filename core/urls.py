@@ -3,9 +3,9 @@ from . import views
 
 urlpatterns = [
     
-    path('', views.login),
-    path('menu/', views.menu),
-    path('cpassword/', views.cpassword),
-    path('desbloqueo/', views.desbloqueo),
+    path('', views.login, name='login'),
+    path('menu/', views.menu, name='menu'),
+    path('cpassword/', views.cpassword, name='cpassword'),
+    path('desbloqueo/', views.desbloqueo, name='desbloqueo'),
 
 ]

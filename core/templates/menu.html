@@ -1,18 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GRUPO TI</title>
-</head>
+{% block content %}
 
-<body>
+<form method="get" action="elija una opcion">
 
-    <h1>Bienvenido unidad TI</h1>
-
-    <button type="button">Cambiar contraseña</button>
-    <button type="button">Desbloquear usuario</button>
+        <select>
+    <button type="button">cambiar Contraseña</button>
+    <button type="button">Desbloqear Usuario</button>
     <button type="button">Fecha de expiracion</button>
+        </select>
+        <input type="submit" value="Enviar">
+
+    </form>
     
-</body>
-</html>
+
+{% end block %}
