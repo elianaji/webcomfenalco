@@ -23,6 +23,14 @@ class cpassword(models.Model):
     def __str__(self):
         return self.newpassword+"comfirmpassword"
 
+class menu(models.Model):
+
+
+    def __str__(self):
+        return self.menu
+
+    def __unicode__(self):
+        return self.menu
 
     
 
