@@ -1,10 +1,9 @@
 from django.contrib import admin
-from core.models import login, cpassword
+from core.models import login, cpassword, menu
 # Register your models here.
 
 class loginAdmin(admin.ModelAdmin):
-        list_display = ('id','username','password')
-        fields= ('id', 'username', 'password')
+    pass
 
 admin.site.register(login, loginAdmin)
 

@@ -1,24 +1,26 @@
 from django.shortcuts import render, HttpResponse
 
-
 def login_view(request):
-
-    if request.method == 'POST':
+    if request.method == 'GET':
+        return render(request, 'login.html')
+    
+    elif request.method == 'POST':
         username = request.POST.get('username')
         password = request.POST.get('password')
 
         user = authenticate(request, usersame=username, password=password)
-
+        
         if user is not None:
             login(request, user)
-            return redirect('/menu')
-
+            return redirect('menu.html')
+        
         else:
             messages.warning(request, 'Usuario o/y contraseña incorrecta')
-
-    return render(request, 'login.html', {
-        'tittle': 'Ingresar'
+            
+            return render(request, 'login.html', {
+                'tittle': 'Ingresar'
     })
+
 
 
 def cpassword(request):
