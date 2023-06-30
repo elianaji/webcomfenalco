@@ -44,10 +44,14 @@ def cpassword(request):
     return render(request, 'cpassword.html' )
 
 def menu(request):
-    return render(request, 'menu.html')
+    return render(request, 'fechaexpi.html')
+
+
 
 def desbloqueo(request):
     return render(request, 'desbloqueo.html')
 
+        
 def fechaexpi(request):
     return render(request, 'fechaexpi.html')
+

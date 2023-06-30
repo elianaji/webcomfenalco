@@ -23,8 +23,8 @@ class cpassword(models.Model):
     def __str__(self):
         return self.newpassword+"comfirmpassword"
 
-class menu(models.Model):
 
+class menu(models.Model):
 
     def __str__(self):
         return self.menu
@@ -33,6 +33,23 @@ class menu(models.Model):
         return self.menu
 
 
+class desbloqueo(models.Model):
+
+    def __str__(self):
+        return self.desbloqueo
+
+    def __unicode__(self):
+        return self.desbloqueo
+
+
+class fechaexpi(models.Model):
     
+    def __str__(self):
+        return self.fechaexpi
+
+    def __unicode__(self):
+        return self.fechaexpi
+
+
 
 

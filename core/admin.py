@@ -1,5 +1,5 @@
 from django.contrib import admin
-from core.models import login, cpassword, menu
+from core.models import login, cpassword, menu, desbloqueo, fechaexpi
 # Register your models here.
 
 class loginAdmin(admin.ModelAdmin):
@@ -16,4 +16,15 @@ class menuAdmin(admin.ModelAdmin):
     pass
 
 admin.site.register(menu, menuAdmin)
+
+class desbloqueoAdmin(admin.ModelAdmin):
+    pass
+
+admin.site.register(desbloqueo, desbloqueoAdmin)
+
+class fechaexpiAdmin(admin.ModelAdmin):
+    pass
+
+admin.site.register(fechaexpi, fechaexpiAdmin)
+
 
