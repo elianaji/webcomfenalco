@@ -7,5 +7,7 @@ urlpatterns = [
     path('menu/', views.menu, name='menu'),
     path('cpassword/', views.cpassword, name='cpassword'),
     path('desbloqueo/', views.desbloqueo, name='desbloqueo'),
+    path('fechaexpi/', views.fechaexpi, name='fechadeexpiracion'),
+
 
 ]

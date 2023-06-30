@@ -44,21 +44,10 @@ def cpassword(request):
     return render(request, 'cpassword.html' )
 
 def menu(request):
-    opcion = request.GET('opcion')
-    
-    if opcion == 'submit1':
-        return redirect('cpassword.html')
-    
-    elif opcion == 'submit2':
-        return redirect('desbloqueo.html')
-    
-    elif opcion == 'submit3':
-        return redirect('fechaexpi.html')
-
-
+    return render(request, 'menu.html')
 
 def desbloqueo(request):
     return render(request, 'desbloqueo.html')
 
 def fechaexpi(request):
-    return render(request, 'desbloqueo.html')
+    return render(request, 'fechaexpi.html')
