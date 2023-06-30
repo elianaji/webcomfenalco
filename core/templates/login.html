@@ -1,7 +1,7 @@
 {% block content %}
     <h1>LOGIN</h1>
 
-    <form action="login" method="post">
+    <form action="{% url 'menu' %}" method="post">
         {% csrf_token %}
 
         <label for="username">Nombre de usuario:</label>
@@ -10,7 +10,7 @@
         <label for="password">Contraseña</label>
         <input type="password" name="password">
         
-        <button type="submit">Iniciar sesión</button>
+        <input type="submit" value="ingresar" />
 
 
     </form>

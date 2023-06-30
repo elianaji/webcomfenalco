@@ -1,26 +1,25 @@
 from django.shortcuts import render, HttpResponse
+from django.contrib.auth import authenticate, login
+from django.contrib import messages
 
-def login_view(request):
+def login(request):
     if request.method == 'GET':
         return render(request, 'login.html')
     
     elif request.method == 'POST':
         username = request.POST.get('username')
         password = request.POST.get('password')
-
-        user = authenticate(request, usersame=username, password=password)
+        
+        user = authenticate(request, username=username, password=password)
         
         if user is not None:
             login(request, user)
-            return redirect('menu.html')
+            return redirect(menu)
         
         else:
-            messages.warning(request, 'Usuario o/y contraseña incorrecta')
+            messages.warning(request, 'Nombre de usuario y/o contraseña inconrrecta')
             
-            return render(request, 'login.html', {
-                'tittle': 'Ingresar'
-    })
-
+            return render(request, 'login.html')
 
 
 def cpassword(request):
@@ -45,31 +44,21 @@ def cpassword(request):
     return render(request, 'cpassword.html' )
 
 def menu(request):
-    opcion = request.POST.get('opcion')
+    opcion = request.GET('opcion')
     
-    if opcion =='button':
-            return redirect('cpassword.html')
-        
-    elif opcion =='button2':
-            return redirect('fechaexpi.html')
-        
-    elif opcion =='button3':
-            return redirect('desbloqueo.html')
+    if opcion == 'submit1':
+        return redirect('cpassword.html')
+    
+    elif opcion == 'submit2':
+        return redirect('desbloqueo.html')
+    
+    elif opcion == 'submit3':
+        return redirect('fechaexpi.html')
+
 
 
 def desbloqueo(request):
+    return render(request, 'desbloqueo.html')
 
-        if request.method == 'POST':
-            username = request.POST.get('username')
-
-        user = authenticate(request, usersame=username)
-
-        if user is not None:
-            login(request, user)
-            return redirect('desbloqueo')
-
-        else:
-            messages.warning(request, 'porfavor verifique el username')
-
-
-# Create your views here.
+def fechaexpi(request):
+    return render(request, 'desbloqueo.html')

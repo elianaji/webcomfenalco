@@ -1,14 +1,17 @@
 {% block content %}
 
-<form method="get" action="menu">
+<h1>Menú Principal</h1>
+<form action="{% url 'cpassword' %}" method="get">
+    <button type="submit1">Cambiar contraseña</button>
+</form>
 
-    <button type="button">cambiar contraseña</button>
-    <button type="button">Desbloquear usuario</button>
-    <button type="button">Fecha de expiracion</button>
+<form action="{% url 'desbloqueo' %}" method="get">
+    <button type="submit2">Desbloqueo</button>
+</form>
 
-        <input type="submit" value="Enviar">
-
-    </form>
+<form action="{% url 'fechaexpi' %}" method="get">
+    <button type="submit3">Fecha de expiracion</button>
+</form>
     
 
 {% endblock %}
