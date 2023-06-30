@@ -1,14 +1,17 @@
-{% block content %}
-    <h1>DESBLOQUEAR</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desbloqear</title>
+</head>
+<body>
 
-    <form action="/usuario" method="get">
+    <h1>Desbloquear usuario</h1>
 
-        <label for="username">Nombre de Usuario</label>
-    
-        <input type="text" name="username"><br/>
-    
+    <form action="/buscar" method="post">
+    <input type="text" name="username" placeholder="Buscar por username">
+    <button type="submit">Buscar</button>
 
-
-    </from>
-
-{% endblock %}
+</body>
+</html>
