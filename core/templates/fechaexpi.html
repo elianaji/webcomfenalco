@@ -4,14 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fecha de expiracion</title>
-</head>
 <body>
 
     <h1>Fecha de expiracion</h1>
 
-    <form action="/buscar" method="post">
-    <input type="text" name="username" placeholder="Buscar por username">
-    <button type="submit">Buscar</button>
 
+<form action="{% url 'cambiarfecha' %}" method="get">
+    <input type="text" name="username" placeholder="buscar por username">
+    <button type="submit">Buscar</button>
+</form>
+
+    <div class="footer">
+        <h3>Desarollado por la unidad especializada de TI- Comfenalco TOLIMA - 2023</h3>
+        <img src="/core/static/imagenes/logo.jpg">
+    </div>
+    
 </body>
 </html>

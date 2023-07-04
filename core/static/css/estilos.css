@@ -1,0 +1,13 @@
+.head {
+    background-color: #068625;
+    padding: 10px;
+    text-align: center;
+}
+
+.footer {
+    background-color:#0FD33E;
+    padding-top: 5px;
+    margin: 0.1em auto;
+    border-radius: 0 0 5px 5px;
+}
+

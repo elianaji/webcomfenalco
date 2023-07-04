@@ -34,7 +34,6 @@ class menu(models.Model):
 
 
 class desbloqueo(models.Model):
-
     def __str__(self):
         return self.desbloqueo
 
@@ -50,6 +49,12 @@ class fechaexpi(models.Model):
     def __unicode__(self):
         return self.fechaexpi
 
+class cambiarfecha(models.Model):
+    cambiarfecha = models.DateField()
+    fechanueva = models.DateField()
+    
+    def __str__(self):
+        return self.cambiarfecha
 
 
 

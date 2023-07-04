@@ -1,6 +1,7 @@
 from django.shortcuts import render, HttpResponse
 from django.contrib.auth import authenticate, login
 from django.contrib import messages
+from django.forms import SelectDateWidget
 
 def login(request):
     if request.method == 'GET':
@@ -19,7 +20,7 @@ def login(request):
         else:
             messages.warning(request, 'Nombre de usuario y/o contraseña inconrrecta')
             
-            return render(request, 'login.html')
+            return render(request, 'cpassword.html')
 
 
 def cpassword(request):
@@ -54,4 +55,6 @@ def fechaexpi(request):
     return render(request, 'fechaexpi.html')
 
 
-
+def cambiarfecha(request):
+    return render (request, 'cambiarfecha.html')
+    

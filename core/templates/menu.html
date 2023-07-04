@@ -1,5 +1,7 @@
 {% block content %}
 
+<head><img src="/core/static/imagenes/logo.jpg" alt=""></head>
+
 <h1>Bienvenido unidad TI</h1>
 
 <form action="{% url 'cpassword' %}" method="get">
@@ -13,6 +15,8 @@
 <form action="{% url 'fechaexpi' %}" method="get">
     <button type="submit">Fecha de expiracion</button>
 </form>
-    
-
+    <div class="footer">
+        <h3>Desarollado por la unidad especializada de TI- Comfenalco TOLIMA - 2023</h3>
+        <img src="/core/static/imagenes/logo.jpg">
+    </div>
 {% endblock %}
