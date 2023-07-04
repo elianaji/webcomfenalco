@@ -44,17 +44,7 @@ def cpassword(request):
     return render(request, 'cpassword.html' )
 
 def menu(request):
-    
-    if request.method == 'GET':
-        opcion = request.GET.get('action_opcion')
-    
-    if opcion == 'action':
-        return render('cpassord.html')
-    elif opcion == 'action2':
-        return render('desbloquear.html')
-    elif opcion == 'action3':
-        return render('fechaexpi.html')
-
+    return render(request, 'menu.html')
 
 def desbloqueo(request):
     return render(request, 'desbloqueo.html')
@@ -62,4 +52,6 @@ def desbloqueo(request):
         
 def fechaexpi(request):
     return render(request, 'fechaexpi.html')
+
+
 
