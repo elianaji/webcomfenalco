@@ -6,16 +6,17 @@ from django.contrib.auth.models import User
 #user = User.objects.create_user(username='eliana',
 #                              password='eliana123')
 
+
 class login(models.Model):
     username = models.CharField(max_length=200)
     passsword = models.CharField(max_length=200)
     
     def __str__(self):
-        return self.username
+        return self.username+ "password"
 
 
 class cpassword(models.Model):
-    passsword  = models.CharField(max_length=10)
+    password  = models.CharField(max_length=10)
     newpassword = models.CharField(max_length=10)
     comfirmpassword = models.CharField(max_length=10)
     
@@ -34,6 +35,8 @@ class menu(models.Model):
 
 
 class desbloqueo(models.Model):
+    estado = models.CharField(max_length=20)
+    
     def __str__(self):
         return self.desbloqueo
 
@@ -50,8 +53,8 @@ class fechaexpi(models.Model):
         return self.fechaexpi
 
 class cambiarfecha(models.Model):
-    cambiarfecha = models.DateField()
-    fechanueva = models.DateField()
+    fechactual = models.DateField(10)
+    fechanueva = models.DateField(10)
     
     def __str__(self):
         return self.cambiarfecha

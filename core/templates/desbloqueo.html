@@ -8,16 +8,24 @@
 
     <h2>Desbloquear usuario</h2>
 
-    <form action="/buscar" method="post">
+
     <input type="text" name="username" placeholder="Buscar por username">
     <button type="submit">Buscar</button>
-    <div id="userDetails"></div>
 
-    <div class="content" id="contenedorbotones2">
 
-        <button type="submit">Desbloquear usuario</button> <img src="bolaroja.gif">
-        <button type="submit">Bloquear usuario</button> <img src="bolaverde.gif">
+    <form action="{% url 'bloquear_usuario' %}" method="get">
+        <button type="submit">bloquear usuario</button>
+    </form>
+    <form action="{% url 'desbloquear_usuario' %}" method="get">
+        <button type="submit">Desbloquear usuario</button>
+    </form>
+
+    
+    <div id="userDetails">
+
     </div>
+
+
 
 </body>
 </html>
