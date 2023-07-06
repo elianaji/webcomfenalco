@@ -43,7 +43,22 @@ class desbloqueo(models.Model):
     def __unicode__(self):
         return self.desbloqueo
 
+class bloquear_usuario(models.Model):
+    
+    def __str__(self):
+        return self.user+ "userDetails"
+    
+    def __unicode__(self):
+        return self.user
 
+class desbloquear_usuario(models.Model):
+    
+    def __str__(self):
+        return self.estado+ "userDetails"
+    
+    def __unicode__(self):
+        return self.estado
+      
 class fechaexpi(models.Model):
     
     def __str__(self):

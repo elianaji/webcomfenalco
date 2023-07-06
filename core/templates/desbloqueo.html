@@ -8,6 +8,8 @@
 
     <h2>Desbloquear usuario</h2>
 
+    <form action="{% url 'menu' %}" method="post">
+        {% csrf_token %}
 
     <input type="text" name="username" placeholder="Buscar por username">
     <button type="submit">Buscar</button>
@@ -20,7 +22,7 @@
         <button type="submit">Desbloquear usuario</button>
     </form>
 
-    
+
     <div id="userDetails">
 
     </div>

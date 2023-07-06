@@ -54,14 +54,15 @@ def desbloqueo(request):
         return render(request, 'desbloqueo.html')
     
     elif request.method == 'POST':
-        return redirect(request, 'bloquear_usuario.html')
-        authenticate_user = authenticate(request, username=request.user.username)
+        return JsonResponse('bloquear_usuario.html')
+        user = authenticate(request, user= userDetails)
     
     else:
-        return render(request, 'desbloquear_usuario.html')
+        return JsonResponse(request, 'desbloquear_usuario.html')
         
 
-def bloquear_usuario(request, user):
+def bloquear_usuario(request, User):
+    
     try:
         user = user.objects.get(id=username)
     except user.DoesNotExist:
@@ -78,7 +79,7 @@ def bloquear_usuario(request, user):
         
     return redirect('userDetails')
 
-def desbloquear_usuario(request, username):
+def desbloquear_usuario(request, User):
     try:
         user = user.objects.get(id=username)
     except user.DoesNotExist:
